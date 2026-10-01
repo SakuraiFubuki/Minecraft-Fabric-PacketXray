@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "packetxray",
+	"version": "${version}",
+	"name": "Packet Xray",
+	"description": "批量发包剥掉服务端的Anti-Xray伪装,透视任意自定义方块(/packetxray)",
+	"authors": ["SakuraiFubuki", "DeepSeek"],
+	"contact": {
+		"homepage": "https://github.com/SakuraiFubuki/Minecraft-Fabric-PacketXray",
+		"sources": "https://github.com/SakuraiFubuki/Minecraft-Fabric-PacketXray",
+		"issues": "https://github.com/SakuraiFubuki/Minecraft-Fabric-PacketXray/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/packetxray/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["mod.deepseek.packetxray.PacketXrayMod"]
+	},
+	"mixins": [
+		{
+			"config": "packetxray.mixins.json",
+			"environment": "client"
+		}
+	],
+	"accessWidener": "packetxray.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
